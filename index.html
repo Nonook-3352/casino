@@ -5,15 +5,45 @@
 </head>
 <body>
     <h1>Welcome to the Casino!</h1>
-    <p>Your current balance: <span id="balance">1000</span></p>
-    <p>Place your bet: <input type="number" id="betAmount" min="1"></p>
-    <button id="rollButton">Roll the Dice</button>
-    <button id="adButton">Watch an Ad (+1000)</button>
-    <p id="result"></p>
+
+    <!-- Login Form -->
+    <div id="loginForm">
+        <input type="text" id="username" placeholder="Enter your username">
+        <button id="loginButton">Log In</button>
+    </div>
+
+    <!-- Game Section -->
+    <div id="gameSection" style="display: none;">
+        <p>Hello, <span id="loggedInUsername"></span>!</p>
+        <p>Your current balance: <span id="balance">1000</span></p>
+        <p>Place your bet: <input type="number" id="betAmount" min="1"></p>
+        <button id="rollButton">Roll the Dice</button>
+        <button id="adButton">Watch an Ad (+1000)</button>
+        <p id="result"></p>
+        <div id="playerContainer" style="display: none;">
+            <iframe
+                id="player"
+                width="640"
+                height="360"
+                src="https://www.youtube.com/embed/gYsUrXhbkPU?autoplay=0"
+                frameborder="0"
+                allowfullscreen
+            ></iframe>
+        </div>
+    </div>
+
     <div id="playerContainer" style="display: none;">
-        <div id="player"></div>
+        <iframe
+            id="player"
+            width="640"
+            height="360"
+            frameborder="0"
+            allowfullscreen
+        ></iframe>
     </div>
     <script src="https://www.youtube.com/iframe_api"></script>
     <script src="script.js"></script>
+
+    
 </body>
 </html>
